@@ -72,7 +72,7 @@ body {
 @media (max-width: 768px) {
     html {
         background-size: 120%;     /* shows more of image */
-        background-position: center;
+       background-position: 30% center; /* key line */
         background-repeat: no-repeat;
         background-color: #111;       /* fills empty space cleanly */
     }
