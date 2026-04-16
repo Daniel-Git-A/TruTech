@@ -65,7 +65,7 @@ body {
         /* fills empty space cleanly */
     }
     .nav-buttons {
-             flex: 0 0 auto;
+         flex: 0 0 auto;
         width: max-content;
         justify-content: flex-start;
     }
@@ -188,7 +188,8 @@ ul {
 .nav-buttons {
     flex: 1;
     display: flex;
-    justify-content: center;
+    margin-left: 20px;
+    /*justify-content: center;*/
     gap: 1em;
 }
 
