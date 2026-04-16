@@ -64,10 +64,13 @@ body {
         background-color: #111;
         /* fills empty space cleanly */
     }
-        .nav-buttons {
-        overflow-x: auto;
-        white-space: nowrap;
-        justify-content: flex-start; /* IMPORTANT */
+    .nav-buttons {
+             flex: 0 0 auto;
+        width: max-content;
+        justify-content: flex-start;
+    }
+        .topbar button {
+        flex: 0 0 auto;
     }
 }
 
@@ -158,17 +161,28 @@ ul {
 }
 
 .topbar {
-    flex: 0 0 auto; /* critical */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background: rgba(20, 20, 20, 0.9);
-
     display: flex;
     align-items: center;
+    gap: 0.75em;
     padding: 0.5em 1em;
     z-index: 1000;
+    box-sizing: border-box;
+}
+.nav-scroll {
+    flex: 1;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.nav-scroll::-webkit-scrollbar {
+    display: none;
 }
 
 .nav-buttons {
@@ -179,6 +193,7 @@ ul {
 }
 
 .topbar button {
+        flex: 0 0 auto;
     background: #00aaff;
     border: none;
     padding: 10px 15px;
