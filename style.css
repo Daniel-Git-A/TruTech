@@ -64,12 +64,14 @@ body {
         background-color: #111;
         /* fills empty space cleanly */
     }
+
     .nav-buttons {
-             flex: 0 0 auto;
+        flex: 0 0 auto;
         width: max-content;
         justify-content: flex-start;
     }
-        .topbar button {
+
+    .topbar button {
         flex: 0 0 auto;
     }
 }
@@ -172,8 +174,10 @@ ul {
     padding: 0.5em 1em;
     z-index: 1000;
     box-sizing: border-box;
-    justify-content: space-between; /* KEY FIX */
+    justify-content: space-between;
+    /* KEY FIX */
 }
+
 .nav-scroll {
     flex: 1;
     overflow-x: auto;
@@ -189,12 +193,14 @@ ul {
 .nav-buttons {
     display: flex;
     gap: 1em;
-    margin-left: 20px; /* space from logo */
-        width: max-content; /* forces overflow */
+    margin-left: 20px;
+    /* space from logo */
+    width: max-content;
+    /* forces overflow */
 }
 
 .topbar button {
-        flex: 0 0 auto;
+    flex: 0 0 auto;
     background: #00aaff;
     border: none;
     padding: 10px 15px;
@@ -241,4 +247,30 @@ body {
     float: right;
     font-size: 24px;
     cursor: pointer;
+}
+
+.gear-wrap {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gear-spin {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    animation: gearRotate 4s linear infinite;
+    transform-origin: center center;
+    filter: brightness(0) saturate(100%) invert(43%) sepia(99%) saturate(1840%) hue-rotate(170deg) brightness(99%) contrast(101%);
+}
+
+@keyframes gearRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
