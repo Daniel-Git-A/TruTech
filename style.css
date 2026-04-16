@@ -71,8 +71,10 @@ body {
 */
 @media (max-width: 768px) {
     html {
-        background-size: cover;     /* fill screen on phones */
-        background-position: left center; /* better framing */
+        background-size: contain;     /* shows more of image */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #111;       /* fills empty space cleanly */
     }
 }
 
