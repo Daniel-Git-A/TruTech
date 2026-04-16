@@ -65,7 +65,7 @@ body {
         /* fills empty space cleanly */
     }
     .nav-buttons {
-         flex: 0 0 auto;
+             flex: 0 0 auto;
         width: max-content;
         justify-content: flex-start;
     }
@@ -172,6 +172,7 @@ ul {
     padding: 0.5em 1em;
     z-index: 1000;
     box-sizing: border-box;
+    justify-content: space-between; /* KEY FIX */
 }
 .nav-scroll {
     flex: 1;
@@ -186,11 +187,10 @@ ul {
 }
 
 .nav-buttons {
-    flex: 1;
     display: flex;
-    margin-left: 20px;
-    /*justify-content: center;*/
     gap: 1em;
+    margin-left: 20px; /* space from logo */
+        width: max-content; /* forces overflow */
 }
 
 .topbar button {
